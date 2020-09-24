@@ -3,7 +3,6 @@ package exception;
 import webserver.request.HttpRequest;
 import webserver.response.HttpResponse;
 import webserver.response.HttpStatusCode;
-import webserver.servlet.AbstractServlet;
 import webserver.servlet.ErrorServlet;
 
 /**

@@ -4,8 +4,6 @@ import webserver.request.HttpRequest;
 import webserver.response.HttpResponse;
 import webserver.response.HttpStatusCode;
 
-import java.awt.print.Pageable;
-
 /**
  * @author Jim, Kim
  * @since 2020-09-24

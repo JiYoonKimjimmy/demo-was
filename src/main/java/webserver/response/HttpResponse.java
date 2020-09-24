@@ -62,7 +62,6 @@ public class HttpResponse {
 
     public void error(String filePath, HttpStatusCode httpStatusCode) throws Exception {
         addStatusLine(HTTP_VERSION_1_1, httpStatusCode);
-        filePath = "";
         forward(filePath);
     }
 

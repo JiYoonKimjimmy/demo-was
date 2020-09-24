@@ -4,7 +4,6 @@ import exception.InternalServerException;
 import webserver.request.HttpRequest;
 import webserver.response.HttpResponse;
 
-import java.awt.print.Pageable;
 import java.util.logging.Logger;
 
 /**

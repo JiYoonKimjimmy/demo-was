@@ -1,6 +1,5 @@
 package webserver;
 
-import exception.InternalServerException;
 import util.PropertyUtils;
 import webserver.response.HttpResponse;
 import webserver.response.HttpStatusCode;
@@ -17,7 +16,7 @@ import java.util.logging.Logger;
 public class HandlerMapping {
     private static final Logger logger = Logger.getLogger(HttpResponse.class.getCanonicalName());
 
-    private static final String SERVLET_PREFIX = "servlet.";
+    private static final String URL_PREFIX = "servlet.";
 
     static SimpleServlet findServlet(String url) {
         Properties properties = PropertyUtils.getInstance().getProperties();
@@ -26,9 +25,11 @@ public class HandlerMapping {
             url = url.substring(1);
         }
 
+        url = URL_PREFIX + url;
+
         try {
-            if (properties.containsKey(SERVLET_PREFIX + url)) {
-                String cn = properties.getProperty(SERVLET_PREFIX + url);
+            if (properties.containsKey(url)) {
+                String cn = properties.getProperty(url);
                 Class c = Class.forName(cn);
                 return (SimpleServlet) c.getConstructor().newInstance();
             } else {
