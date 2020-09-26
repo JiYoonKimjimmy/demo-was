@@ -6,6 +6,7 @@ import webserver.response.HttpStatusCode;
 import webserver.servlet.ErrorServlet;
 import webserver.servlet.SimpleServlet;
 
+import java.util.Optional;
 import java.util.Properties;
 import java.util.logging.Logger;
 
@@ -23,6 +24,7 @@ public class HandlerMapping {
 
         if (url.startsWith("/")) {
             url = url.substring(1);
+            if ("".equals(url)) url = "hello";
         }
 
         url = URL_PREFIX + url;

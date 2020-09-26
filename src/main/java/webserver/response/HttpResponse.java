@@ -49,6 +49,10 @@ public class HttpResponse {
     }
 
     public void forward(String filePath) throws Exception {
+        if ("/".equals(filePath.split("\\.")[0])) {
+            filePath = "/hello.html";
+        }
+
         addResponseBody(filePath);
         addResponseHeader("Content-Length", responseBody.getBodyLength());
         writeResponseMessage();
