@@ -1,7 +1,6 @@
 package webserver;
 
 
-import sample.HttpServer;
 import util.PropertyUtils;
 
 import java.io.IOException;

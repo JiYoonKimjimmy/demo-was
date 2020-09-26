@@ -8,7 +8,7 @@ import java.util.logging.Level;
  * @author Jim, Kim
  * @since 2020-09-23
  */
-public class ResponseBody {
+class ResponseBody {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(ResponseBody.class.getCanonicalName());
     private byte[] body;
 

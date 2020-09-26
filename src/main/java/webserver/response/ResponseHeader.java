@@ -9,7 +9,7 @@ import java.util.Map;
  * @author Jim, Kim
  * @since 2020-09-23
  */
-public class ResponseHeader {
+class ResponseHeader {
     private Map<String, String> headers = new HashMap<>();
 
     void addWriteHeader(DataOutputStream dos) throws IOException {

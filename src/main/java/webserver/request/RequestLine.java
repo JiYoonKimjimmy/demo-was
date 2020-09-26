@@ -4,7 +4,7 @@ package webserver.request;
  * @author Jim, Kim
  * @since 2020-09-23
  */
-public class RequestLine {
+class RequestLine {
 
     private String method;
     private String url;

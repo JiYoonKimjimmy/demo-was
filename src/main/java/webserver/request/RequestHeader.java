@@ -6,7 +6,7 @@ import java.util.Map;
  * @author Jim, Kim
  * @since 2020-09-23
  */
-public class RequestHeader {
+class RequestHeader {
     private Map<String, String> headers;
 
     public RequestHeader(Map<String, String> headers) {

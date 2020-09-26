@@ -1,7 +1,5 @@
 package webserver.response;
 
-import exception.InternalServerException;
-
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
