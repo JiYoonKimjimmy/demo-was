@@ -1,10 +1,11 @@
 package webserver.response;
 
 import java.io.DataOutputStream;
-import java.io.IOException;
+import java.io.File;
 import java.io.OutputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
@@ -38,12 +39,10 @@ public class HttpResponse {
         responseHeader.addHeader(key, value);
     }
 
-    public void addResponseBody(String url) {
-        try {
-            this.responseBody = new ResponseBody(Files.readAllBytes(Paths.get("./webapp" + url)));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+    public void addResponseBody(String url) throws Exception {
+        url = new File("").getAbsolutePath() + "/classes/webapp" + url;
+        logger.log(Level.INFO, "file path : " + url);
+        this.responseBody = new ResponseBody(Files.readAllBytes(Paths.get(url)));
     }
 
     public void forward(String filePath) throws Exception {
